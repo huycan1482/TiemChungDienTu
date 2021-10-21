@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "520110799636",
+    "firebase_url": "https://app-tiem-chung-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "app-tiem-chung",
+    "storage_bucket": "app-tiem-chung.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520110799636:android:56c2721903dcf2ae23e001",
+        "android_client_info": {
+          "package_name": "com.example.tiemchungdientu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520110799636-3nlbvrfikjtfbiasbhqfg4747n3s9qo2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8wD-o-aRWBmOnfmEsCCgSD-isnek31E0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520110799636-3nlbvrfikjtfbiasbhqfg4747n3s9qo2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

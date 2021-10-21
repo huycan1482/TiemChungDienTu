@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.tiemchungdientu.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_createBaby"
+            app:destination="@id/navigation_createBaby" />
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_updateBaby"
+            app:destination="@id/navigation_updateBaby" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.tiemchungdientu.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.tiemchungdientu.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_createBaby"
+        android:name="com.example.tiemchungdientu.ui.createBaby.CreateBabyFragment"
+        android:label="Create Baby"
+        tools:layout="@layout/fragment_create_baby" >
+
+        <action
+            android:id="@+id/action_navigation_createBaby_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_updateBaby"
+        android:name="com.example.tiemchungdientu.ui.updateBaby.UpdateBabyFragment"
+        android:label="Update Baby"
+        tools:layout="@layout/fragment_update_baby">
+
+        <action
+            android:id="@+id/action_navigation_updateBaby_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_navigation_updateBaby_to_navigation_notInjected"
+            app:destination="@id/navigation_notInjected" />
+
+        <action
+            android:id="@+id/action_navigation_updateBaby_to_navigation_injected"
+            app:destination="@id/navigation_injected" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_notInjected"
+        android:name="com.example.tiemchungdientu.ui.notInjected.NotInjectedFragment"
+        android:label="Not Injected"
+        tools:layout="@layout/fragment_not_injected">
+
+        <action
+            android:id="@+id/action_navigation_notInjected_to_navigation_changeInjected"
+            app:destination="@id/navigation_changeInjected" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_injected"
+        android:name="com.example.tiemchungdientu.ui.injected.InjectedFragment"
+        android:label="Injected"
+        tools:layout="@layout/fragment_injected">
+
+        <action
+            android:id="@+id/action_navigation_injected_to_navigation_changeInjected"
+            app:destination="@id/navigation_changeInjected" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_changeInjected"
+        android:name="com.example.tiemchungdientu.ui.changeInjected.ChangeInjectedFragment"
+        android:label="Change Injected"
+        tools:layout="@layout/fragment_change_injected">
+
+        <action
+            android:id="@+id/action_navigation_changeInjected_to_navigation_notInjected"
+            app:destination="@id/navigation_notInjected" />
+
+        <action
+            android:id="@+id/action_navigation_changeInjected_to_navigation_injected"
+            app:destination="@id/navigation_injected" />
+    </fragment>
+
+
+</navigation>
