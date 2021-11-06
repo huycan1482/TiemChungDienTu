@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.tiemchungdientu.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="Trang chủ"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -24,14 +24,20 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.tiemchungdientu.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="Dịch bệnh"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.tiemchungdientu.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_settings"
+        android:name="com.example.tiemchungdientu.ui.settings.SettingsFragment"
+        android:label="Cài đặt"
+        tools:layout="@layout/fragment_settings" >
+
+        <action
+            android:id="@+id/action_navigation_setting_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_createBaby"

@@ -151,6 +151,7 @@ public class Baby extends Model {
                         if (child.getKey().equals("created_at")) baby.setCreated_at(child.getValue().toString());
 
                     }
+
                     response.response(baby);
                 }
                 @Override

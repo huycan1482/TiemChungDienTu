@@ -5,20 +5,26 @@
       <map>
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/drawable-v24/custom_button.xml" value="0.290625" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/drawable-v24/custom_lock_icon.xml" value="0.290625" />
+        <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/drawable-v24/ic_baseline_lock_24.xml" value="0.225" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/drawable-v24/ic_username.xml" value="0.290625" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/drawable/ic_baseline_person_add_24.xml" value="0.290625" />
+        <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/activity_register_user.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/babies_item.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_change_injected.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_create_baby.xml" value="0.22083333333333333" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_create_user.xml" value="0.27447916666666666" />
+        <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_dashboard.xml" value="0.17447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_injected.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_not_injected.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_register_user.xml" value="0.27447916666666666" />
+        <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/fragment_update_baby.xml" value="0.264" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/injected_item.xml" value="0.27447916666666666" />
         <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/layout/not_injected_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/OtherCode/Code Android/AndroidProject/TiemChungDienTu/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17760416666666667" />
       </map>
     </option>
   </component>

@@ -10,12 +10,12 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class createInjection implements OnDataChangeListener {
+public class CreateInjection implements OnDataChangeListener {
 
     String mBabyId;
     String mBabyBirth;
 
-    public createInjection (String babyId, String babyBirth) {
+    public CreateInjection(String babyId, String babyBirth) {
         mBabyId = babyId;
         mBabyBirth = babyBirth;
         Vaccinate vaccine = new Vaccinate();

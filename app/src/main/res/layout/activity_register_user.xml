@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fr_Singup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    tools:context=".ui.registerUser.RegisterUserFragment">
+
+    <TextView
+        android:id="@+id/txtdangkyshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Đăng ký tài khoản"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="344dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableStart="@drawable/custom_usename_icon"
+        android:drawablePadding="10dp"
+        android:hint="User Phone"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtdangkyshow" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="344dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableStart="@drawable/custom_lock_icon"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        style="@style/btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_button"
+        android:gravity="center|fill_horizontal|center_vertical"
+        android:text="Đăng Ký"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

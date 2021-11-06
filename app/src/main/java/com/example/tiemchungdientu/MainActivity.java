@@ -1,5 +1,7 @@
 package com.example.tiemchungdientu;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements Navigate {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -32,14 +35,17 @@ public class MainActivity extends AppCompatActivity implements Navigate {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
 //        setSupportActionBar(getSupportActionBar().get);
+
+//        SharedPreferences preferences = getSharedPreferences("HUY", MODE_PRIVATE);
+//        String userId = preferences.getString("USER_ID", null);
+//        Log.d("DHtest", userId + "");
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_settings)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements Navigate {
     }
 
     @Override
+
     public void navigate(int actionId, Bundle bundle) {
         navController.navigate(actionId, bundle);
     }

@@ -2,6 +2,7 @@ package com.example.tiemchungdientu.ui.home;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tiemchungdientu.MyApplication;
 import com.example.tiemchungdientu.MyInterface.OnDataChangeListener;
 import com.example.tiemchungdientu.MyInterface.OnItemAdapterClickListener;
 import com.example.tiemchungdientu.R;
@@ -47,7 +49,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.BabyViewHolder
                 baby.setParent_id(data.child("parent_id").getValue().toString());
                 baby.setGender(data.child("gender").getValue().toString());
                 baby.setCreated_at(data.child("created_at").getValue().toString());
-                mBabies.add(baby);
+
+                if (data.child("parent_id").getValue().toString().equals(MyApplication.mUserId)) {
+                    mBabies.add(baby);
+                }
 
             }
 
@@ -138,7 +143,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.BabyViewHolder
 
     @Override
     public int getItemCount() {
-//        Log.d("DHtest", String.valueOf(mBabies.size()));
         return mBabies.size();
     }
 }

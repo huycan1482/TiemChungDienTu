@@ -11,36 +11,41 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tiemchungdientu.MyInterface.Navigate;
 import com.example.tiemchungdientu.R;
 import com.example.tiemchungdientu.databinding.FragmentDashboardBinding;
+import com.example.tiemchungdientu.ui.notInjected.NotInjectedAdapter;
+import com.example.tiemchungdientu.ui.updateBaby.UpdateBabyFragment;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
     private FragmentDashboardBinding binding;
 
+    private DashboardAdapter dashboardAdapter;
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        View view = inflater.inflate(R.layout.fragment_not_injected, container, false);
+        RecyclerView notInjected = view.findViewById(R.id.list_notInjected);
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+        dashboardAdapter = new DashboardAdapter();
+        notInjected.setAdapter(dashboardAdapter);
+
+        notInjected.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+//        notInjectedAdapter.setOnItemAdapterClickListener(this);
+
+        return view;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
     }
 }

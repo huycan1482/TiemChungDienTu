@@ -1,6 +1,7 @@
 package com.example.tiemchungdientu.ui.createBaby;
 
 import android.app.DatePickerDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -19,7 +20,7 @@ import com.example.tiemchungdientu.Converters;
 import com.example.tiemchungdientu.MyInterface.Navigate;
 import com.example.tiemchungdientu.R;
 import com.example.tiemchungdientu.model.Baby;
-import com.example.tiemchungdientu.createInjection;
+import com.example.tiemchungdientu.CreateInjection;
 
 import java.util.Calendar;
 
@@ -93,6 +94,9 @@ public class CreateBabyFragment extends Fragment implements View.OnClickListener
 
         if(view.getId() == R.id.createBtnTest) {
 
+            SharedPreferences preferences = getContext().getSharedPreferences("HUY", getContext().MODE_PRIVATE);
+            String userId = preferences.getString("USER_ID", null);
+
             Baby baby = new Baby();
 
             baby.setName(mCreateBabyName.getText().toString());
@@ -100,7 +104,7 @@ public class CreateBabyFragment extends Fragment implements View.OnClickListener
 
             String[] splitsDate = mCreateBabyBirth.getText().toString().split("/");
             baby.setBirth(splitsDate[2] + "-" + splitsDate[1] + "-" + splitsDate[0]);
-            baby.setParent_id("0");
+            baby.setParent_id(userId);
 
             if (mCreateBabyFemale.isChecked()) {
                 baby.setGender("0");
@@ -112,7 +116,7 @@ public class CreateBabyFragment extends Fragment implements View.OnClickListener
 
             baby.store();
 
-            createInjection test = new createInjection(baby.getId(), baby.getBirth());
+            CreateInjection test = new CreateInjection(baby.getId(), baby.getBirth());
 
             displayToast("Thêm thành công");
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <TextView
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="20dp"
+        android:text="Số điện thoại" />
+
+    <EditText
+        android:id="@+id/updateUserPhone"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Mật khẩu mới" />
+
+    <EditText
+        android:id="@+id/updateUserPassword"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/updateUserBtn"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Sửa" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:text="Thoát tài khoản" />
+</LinearLayout>

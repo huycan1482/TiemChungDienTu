@@ -190,7 +190,6 @@ public class UpdateBabyFragment extends Fragment implements View.OnClickListener
             Bundle bundle = new Bundle();
             bundle.putString(CURRENT_BABY_ID, mCurrentBaby);
             navigateTo(R.id.action_navigation_updateBaby_to_navigation_notInjected, bundle);
-
         }
 
     }
