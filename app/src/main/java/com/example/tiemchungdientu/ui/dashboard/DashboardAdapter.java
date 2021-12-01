@@ -76,20 +76,21 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Vacc
             mID = itemView.findViewById(R.id.notInjectedId);
             mImage = itemView.findViewById(R.id.notInjected_image);
 
-//            Collections.sort(mInjections, new Comparator<Injection>() {
-//                @Override
-//                public int compare(Injection injection1, Injection injection2) {
-//                    if (Long.parseLong(injection1.getCreated_at()) < Long.parseLong(injection2.getCreated_at())) {
-//                        return 1;
-//                    } else {
-//                        if (Long.parseLong(injection1.getCreated_at()) == Long.parseLong(injection2.getCreated_at())) {
-//                            return 0;
-//                        } else {
-//                            return -1;
-//                        }
-//                    }
-//                }
-//            });
+            Collections.sort(mVaccines, new Comparator<Vaccinate>() {
+                @Override
+                public int compare(Vaccinate vaccinate1, Vaccinate vaccinate2) {
+                    if (Long.parseLong(vaccinate1.getDate()) < Long.parseLong(vaccinate2.getDate())) {
+                        return 1;
+                    } else {
+                        if (Long.parseLong(vaccinate1.getDate()) == Long.parseLong(vaccinate2.getDate())) {
+                            return 0;
+                        } else {
+                            return -1;
+                        }
+                    }
+                }
+            });
+//            Sắp xếp tháng giảm đần
 
             itemView.setOnClickListener(this);
         }
